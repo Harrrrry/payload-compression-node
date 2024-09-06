@@ -7,7 +7,7 @@ export class AppController {
   @Post('upload-compressed')
   async handleCompressedData(@Req() req: Request, @Res() res: Response) {
     let buffer = [];
-
+   
     req.on('data', (chunk) => {
       buffer.push(chunk);
     });
@@ -20,7 +20,9 @@ export class AppController {
         if (err) {
           res.status(500).send('Failed to decompress data');
         } else {
+          
           const jsonData = JSON.parse(decompressedData.toString());
+          console.log(jsonData)
           console.log('Decompressed Data:', jsonData);
 
           // Handle your data here
