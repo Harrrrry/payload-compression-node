@@ -7,9 +7,9 @@ async function bootstrap() {
 
   // Enable CORS with the necessary configurations
   app.enableCors({
-    origin: 'https://your-netlify-site.netlify.app',
+    origin: 'https://mellow-frangipane-4f17ec.netlify.app/',
     methods: 'GET,POST,PUT,DELETE,OPTIONS',
-    allowedHeaders: 'Content-Type, Authorization, Content-Encoding, X-Content-Compressed',
+    allowedHeaders: 'Content-Type, Authorization, Content-Encoding',
   });
 
   // Increase payload size limit
